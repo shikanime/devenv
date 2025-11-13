@@ -19,12 +19,19 @@ pub fn expand_glob_patterns(patterns: &[String]) -> Vec<String> {
     patterns
         .iter()
         .flat_map(|pattern| {
-            glob(pattern)
-                .ok()
-                .into_iter()
-                .flatten()
-                .filter_map(|path| path.ok())
-                .filter_map(|path| path.to_str().map(String::from))
+            glob_with(
+                pattern,
+                MatchOptions {
+                    case_sensitive: true,
+                    require_literal_separator: true,
+                    require_literal_leading_dot: true,
+                },
+            )
+            .ok()
+            .into_iter()
+            .flatten()
+            .filter_map(|path| path.ok())
+            .filter_map(|path| path.to_str().map(String::from))
         })
         .collect()
 }
