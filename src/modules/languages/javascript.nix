@@ -260,9 +260,10 @@ in
       enable = lib.mkEnableOption "install npm";
       package = lib.mkOption {
         type = lib.types.package;
-        default = cfg.package.override {
-          enableNpm = true;
-        };
+        default =
+          # Recent Node.js releases include npm and no longer provide a way to
+          # disable it (https://github.com/NixOS/nixpkgs/commit/7459fe949f2905620de01ee4a16455d974f4b391)
+          cfg.package.override (args: args // lib.optionalAttrs (lib.hasAttr "enableNpm" args) { enableNpm = true; });
         defaultText = lib.literalExpression "languages.javascript.package";
         description = "The Node.js package to use.";
       };
