@@ -260,9 +260,7 @@ in
       enable = lib.mkEnableOption "install npm";
       package = lib.mkOption {
         type = lib.types.package;
-        default = cfg.package.override {
-          enableNpm = true;
-        };
+        default = cfg.package;
         defaultText = lib.literalExpression "languages.javascript.package";
         description = "The Node.js package to use.";
       };
