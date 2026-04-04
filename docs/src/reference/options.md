@@ -13017,9 +13017,9 @@ string
 ```
 ''
   ---
-  
+
   extends: relaxed
-  
+
   rules:
     indentation: enable
 ''
@@ -14999,7 +14999,7 @@ package
 
 
 *Default:*
-` pkgs.nodePackages.pnpm `
+` pkgs.pnpm `
 
 *Declared by:*
  - [https://github.com/cachix/devenv/blob/main/src/modules/languages/javascript.nix](https://github.com/cachix/devenv/blob/main/src/modules/languages/javascript.nix)
@@ -20197,7 +20197,7 @@ strings concatenated with “\\n”
   {
     debug
   }
-  
+
   # Site block
   example.com {
     encode gzip
@@ -22146,7 +22146,7 @@ strings concatenated with “\\n”
 ```
 ''
   log4j.rootLogger=INFO, stdout
-  
+
   log4j.appender.stdout=org.apache.log4j.ConsoleAppender
   log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
   log4j.appender.stdout.layout.ConversionPattern=[%d] %p %m (%c)%n
@@ -28063,7 +28063,7 @@ strings concatenated with “\\n”
 ```
 ''
   vcl 4.0;
-  
+
   backend default {
     .host = "127.0.0.1";
     .port = "80";
@@ -42932,7 +42932,7 @@ package
 
 
 *Default:*
-` pkgs.nodePackages.prettier `
+` pkgs.prettier `
 
 *Declared by:*
  - [https://github.com/numtide/treefmt-nix/blob/main/programs/prettier.nix](https://github.com/numtide/treefmt-nix/blob/main/programs/prettier.nix)
