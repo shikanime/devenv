@@ -289,7 +289,7 @@ package
 
 
 *Default:*
-` pkgs.nodePackages.pnpm `
+` pkgs.pnpm `
 
 *Declared by:*
  - [https://github\.com/cachix/devenv/blob/main/src/modules/languages/javascript\.nix](https://github.com/cachix/devenv/blob/main/src/modules/languages/javascript.nix)

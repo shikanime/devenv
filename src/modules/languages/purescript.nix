@@ -25,8 +25,6 @@ in
   config = lib.mkIf cfg.enable {
     packages = [
       cfg.package
-      pkgs.nodePackages.purescript-language-server
-      pkgs.nodePackages.purs-tidy
       pkgs.purescript-psa
       (supportAarch64Darwin pkgs.psc-package)
     ];
